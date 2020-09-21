@@ -1,7 +1,7 @@
 # Sistema-de-ventas
 
 #### Contribuidor:
-    *[César A.](https://github.com/hiromi00)
+    + [César A.](https://github.com/hiromi00)
     
 #### Sobre este proyecto:
 Sistema de ventas desarrollado en Java usando el OpenJDK 12.0.1. Este sistema usando una interfaz sencilla, pero con todas las funcionalidades para un punto de ventas de un negocio el cual apenas está iniciando.   

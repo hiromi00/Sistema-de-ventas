@@ -18,6 +18,9 @@ Al abrir el sistema, se mostrará toda la ventana principal donde se eligira si 
 ![alt text](https://raw.githubusercontent.com/hiromi00/Sistema-de-ventas/master/images/pantInicio.png "Inicio")
 
 
-####Ventana de Inventario:
+#### Ventana de Inventario:
 En la ventana de inventario nos encontramos con el sistema central, donde se puede hacer toda la carga y descarga de stock a voluntad del dueño del negocio. Así tambien podrá buscar inventario por suclave y así poder verificar su stock, poder editar el producto o poder eliminarlo, ya siendo la voluntad del dueño.
-![alt text]()
+![alt text](https://raw.githubusercontent.com/hiromi00/Sistema-de-ventas/master/images/inventario.jpg)
+
+#### Ventana de nuevo producto:
+Aquí se podrá cargar un nuevo producto 

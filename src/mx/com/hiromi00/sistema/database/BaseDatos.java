@@ -44,7 +44,7 @@ public class BaseDatos {
     public void insertarProducto(Producto prod){
         try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
             
             //Se crea el archivo que contendrá la foto
             File fileFoto = prod.getFotoProducto();
@@ -92,7 +92,7 @@ public class BaseDatos {
     public void insertarProveedor(Proveedor prov){
         try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
             
             //Se inicia la conexión de la base de datos
             String sqlText = "INSERT INTO cat_proveedores (nombre_proveedor, direc_proveedor, "
@@ -127,7 +127,7 @@ public class BaseDatos {
     public void actualizarInventario(Producto prod, double cantidad){
         try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
             
             //Se inicia la conexión de la base de datos
             String sqlText = "UPDATE cat_productos SET existencias_prod = ? WHERE id_prod = ?";
@@ -158,7 +158,7 @@ public class BaseDatos {
         try{
             
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
             
             //Se inicia la conexión de la base de datos
             String sqlText = "INSERT INTO ventas (monto_venta, fecha_venta) VALUES (?, ?)";
@@ -199,7 +199,7 @@ public class BaseDatos {
     public void insertarCategoria(CategoriaProd catProd){
         try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
             
             //Se inicia la conexión de la base de datos
             String sqlText = "INSERT INTO cat_categorias (nom_categoria_prod, desc_categoria_prod) "
@@ -229,7 +229,7 @@ public class BaseDatos {
     public void insertarDetalleVenta(DetalleVenta detVen){
         try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
             
             //Se inicia la conexión de la base de datos
             String sqlText = "INSERT INTO detalle_venta (id_venta, id_prod, cantidad_vendida) "
@@ -261,7 +261,7 @@ public class BaseDatos {
         ArrayList <Producto> listaProductos = new ArrayList<Producto>();
         try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
  
             //Se inicia la conexión de la base de datos
             String sqlText = "SELECT * FROM cat_productos ORDER BY nombre_prod";
@@ -311,7 +311,7 @@ public class BaseDatos {
         ArrayList <CategoriaProd> listaCategorias = new ArrayList<CategoriaProd>();
         try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
  
             //Se inicia la conexión de la base de datos
             String sqlText = "SELECT * FROM cat_categorias";
@@ -353,7 +353,7 @@ public class BaseDatos {
         ArrayList <Proveedor> listaProveedores = new ArrayList<Proveedor>();
         try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
  
             //Se inicia la conexión de la base de datos
             String sqlText = "SELECT * FROM cat_proveedores";
@@ -401,7 +401,7 @@ public class BaseDatos {
         ArrayList<Producto> listaProd = new ArrayList<>();
         try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
 
             //Se inicia la conexión de la base de datos
             String sqlText = "SELECT * FROM cat_productos "
@@ -452,7 +452,7 @@ public class BaseDatos {
     public void borrarProd(Producto prod){
         try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
             
             //Se inicia la conexión de la base de datos
             String sqlText = "DELETE FROM cat_productos WHERE id_prod = ?";
@@ -481,7 +481,7 @@ public class BaseDatos {
         InputStream streamFoto = null;
        try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
 
             //Se inicia la conexión de la base de datos
             String sqlText = "SELECT foto_prod FROM cat_productos WHERE id_prod = ?";
@@ -516,7 +516,7 @@ public class BaseDatos {
     public void actualizarProducto(Producto prod, boolean cambiarFoto){
         try{
             //Se abre la conexión con la base de datos
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "yokodera00");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/db-sistema", "postgres", "password");
             
             if (cambiarFoto){
                 //Se crea el archivo que contendrá la foto
